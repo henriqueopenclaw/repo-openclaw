@@ -648,6 +648,48 @@ ul { list-style: none; }
 .agitation__card p { font-size: 1rem; color: var(--td-body); line-height: 1.85; }
 .agitation__card strong { color: var(--td-hi); }
 
+.agitation__loop,
+.agitation__flaws {
+  list-style: none;
+  padding: 0;
+  margin: var(--sp-3) 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+
+.agitation__loop li,
+.agitation__flaws li {
+  font-size: 1rem;
+  color: var(--td-body);
+  padding-left: var(--sp-3);
+  position: relative;
+  line-height: 1.5;
+}
+
+.agitation__loop li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--c-a2);
+  font-weight: 700;
+}
+
+.agitation__flaws li::before {
+  content: "×";
+  position: absolute;
+  left: 0;
+  color: var(--c-a2);
+  font-weight: 700;
+}
+
+.agitation__thought {
+  margin: var(--sp-3) 0;
+  font-size: 1.05rem;
+  color: var(--td-hi);
+  font-style: italic;
+}
+
 /* Fraunces italic no punchline — tom íntimo e impactante */
 .agitation__punchline {
   font-family: 'Fraunces', Georgia, serif;
