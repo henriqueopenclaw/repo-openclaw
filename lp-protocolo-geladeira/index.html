@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="App que monta seu cardápio da semana inteira + lista do mercado em 1 clique. Emagreça comendo o que você gosta." />
+  <title>Protocolo Geladeira Inteligente — Cardápio + Lista do Mercado em 1 Clique</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══ SEÇÃO 1 · HERO (DARK BASE) ═══ -->
+  <section class="hero" id="hero">
+    <div class="hero__bg"></div>
+    <div class="container hero__split">
+
+      <!-- Coluna texto -->
+      <div class="hero__content">
+        <span class="hero__tag reveal">CHEGA DE PDF DE 200 PÁGINAS QUE NINGUÉM LÊ</span>
+
+        <h1 class="hero__headline reveal">
+          Emagreça comendo o que você gosta com um aplicativo que monta seu
+          <span class="c-a1">cardápio da semana inteira</span> + lista do mercado em
+          <span class="c-a2">1 clique</span>
+        </h1>
+
+        <p class="hero__sub reveal">
+          Enquanto todo mundo ainda vende ebook e planilha, a gente criou um app interativo
+          que faz o trabalho pra você — do planejamento até a lista separada por corredor do mercado.
+        </p>
+
+        <a href="#oferta" class="btn btn--hero reveal">
+          QUERO MEU APP AGORA
+          <span class="btn__icon"><i data-lucide="arrow-right"></i></span>
+        </a>
+
+        <div class="hero__trust reveal">
+          <span class="hero__trust-item">
+            <i data-lucide="check-circle-2"></i> Acesso imediato
+          </span>
+          <span class="hero__trust-item">
+            <i data-lucide="smartphone"></i> Funciona no celular
+          </span>
+          <span class="hero__trust-item">
+            <i data-lucide="ban"></i> Sem mensalidade
+          </span>
+        </div>
+      </div>
+
+      <!-- Coluna imagem -->
+      <div class="hero__image-col reveal">
+        <img
+          src="images/hero-app.webp"
+          alt="App Protocolo Geladeira Inteligente — cardápio semanal no celular"
+          class="hero__img"
+          width="800"
+          height="600"
+          loading="eager"
+        />
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══ SEÇÃO 2 · PROBLEMA (LIGHT BASE) ═══ -->
+  <section class="section section--lt" id="problema">
+    <div class="container">
+
+      <h2 class="section__title reveal">Você já se reconheceu em alguma dessas situações?</h2>
+
+      <ul class="problem__list">
+        <li class="problem__item card-lt reveal">
+          <span class="icon-box icon-box--md icon-box--a2"><i data-lucide="frown"></i></span>
+          <span>Você baixou receita saudável, mas na hora H não sabe o que cozinhar</span>
+        </li>
+        <li class="problem__item card-lt reveal">
+          <span class="icon-box icon-box--md icon-box--a2"><i data-lucide="shopping-cart"></i></span>
+          <span>Vai no mercado sem lista e volta com tudo errado</span>
+        </li>
+        <li class="problem__item card-lt reveal">
+          <span class="icon-box icon-box--md icon-box--a2"><i data-lucide="refresh-cw"></i></span>
+          <span>Toda segunda-feira recomeça a dieta — e na quinta já desistiu</span>
+        </li>
+        <li class="problem__item card-lt reveal">
+          <span class="icon-box icon-box--md icon-box--a2"><i data-lucide="smartphone"></i></span>
+          <span>Tem 3 apps de receita no celular e não usa nenhum</span>
+        </li>
+        <li class="problem__item card-lt reveal">
+          <span class="icon-box icon-box--md icon-box--a2"><i data-lucide="receipt"></i></span>
+          <span>Já comprou planilha, PDF e curso... e nada mudou de verdade</span>
+        </li>
+      </ul>
+
+      <div class="problem__transition reveal">
+        <p>
+          <strong>O problema não é você.</strong> É que ninguém te deu uma ferramenta de verdade
+          — só prometeu resultado com papel e PDF.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══ SEÇÃO 3 · AGITAÇÃO (DARK SURFACE) ═══ -->
+  <section class="section section--dk-s" id="agitacao">
+    <div class="container">
+
+      <h2 class="section__title reveal">
+        Dieta sem graça nunca funcionou.<br />
+        <span class="c-a2">E nunca vai funcionar.</span>
+      </h2>
+
+      <div class="agitation__card card-dk reveal">
+        <p>
+          Eles te vendem um PDF com 200 receitas. Você abre, fica impressionada, salva no celular.
+          Uma semana depois você <strong>nem lembra que existe.</strong>
+        </p>
+        <p>
+          Na segunda seguinte você recomeça a dieta. O ciclo não acaba porque
+          <strong>a solução era errada desde o começo.</strong>
+        </p>
+        <p class="agitation__punchline">
+          Você não precisa de mais receita.<br />
+          Você precisa de <span class="c-a1">um sistema que pensa por você.</span>
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══ SEÇÃO 4 · VIRADA (LIGHT SURFACE) ═══ -->
+  <section class="section section--lt-s" id="virada">
+    <div class="container">
+
+      <h2 class="section__title reveal">
+        Apresento o <span class="c-a1">Protocolo Geladeira Inteligente</span>
+      </h2>
+
+      <p class="virada__intro reveal">
+        Não é um curso. Não é um ebook. Não é uma planilha.<br />
+        É um <strong>aplicativo web</strong> — você abre direto no celular, sem baixar nada.
+      </p>
+
+      <div class="steps">
+        <div class="step card-lt reveal">
+          <div class="step__num">1</div>
+          <div>
+            <h3 class="t-subhead step__title">Escolha o que você gosta</h3>
+            <p class="step__desc">Preferências, intolerâncias — o app se adapta a você, não o contrário.</p>
+          </div>
+        </div>
+        <div class="step__connector"></div>
+        <div class="step card-lt reveal">
+          <div class="step__num">2</div>
+          <div>
+            <h3 class="t-subhead step__title">O app monta seu cardápio</h3>
+            <p class="step__desc">Café, almoço, lanche e jantar da semana inteira — com calorias e macros calculados.</p>
+          </div>
+        </div>
+        <div class="step__connector"></div>
+        <div class="step card-lt reveal">
+          <div class="step__num">3</div>
+          <div>
+            <h3 class="t-subhead step__title">Lista do mercado pronta</h3>
+            <p class="step__desc">Separada por corredor. Entra no mercado e sai em 15 minutos.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Grid de Receitas — Princípio: produto de receita precisa mostrar os pratos -->
+      <div class="recipes-preview reveal">
+        <p class="recipes-preview__label">Cardápios que o app vai montar pra você:</p>
+        <div class="recipes-preview__grid">
+          <figure class="recipes-preview__item">
+            <img src="images/receita-bowl-proteico.webp" alt="Bowl proteico com legumes frescos" loading="lazy" width="500" height="500" />
+            <figcaption>Bowl Proteico</figcaption>
+          </figure>
+          <figure class="recipes-preview__item">
+            <img src="images/receita-salada-nutritiva.webp" alt="Salada colorida e nutritiva" loading="lazy" width="500" height="500" />
+            <figcaption>Salada Nutritiva</figcaption>
+          </figure>
+          <figure class="recipes-preview__item">
+            <img src="images/receita-marmita.webp" alt="Marmita saudável preparada" loading="lazy" width="500" height="500" />
+            <figcaption>Marmita da Semana</figcaption>
+          </figure>
+          <figure class="recipes-preview__item">
+            <img src="images/receita-jantar-leve.webp" alt="Jantar leve e saboroso" loading="lazy" width="500" height="500" />
+            <figcaption>Jantar Leve</figcaption>
+          </figure>
+          <figure class="recipes-preview__item">
+            <img src="images/receita-cafe-manha.webp" alt="Café da manhã nutritivo" loading="lazy" width="500" height="500" />
+            <figcaption>Café da Manhã</figcaption>
+          </figure>
+          <figure class="recipes-preview__item">
+            <img src="images/receita-almoco-completo.webp" alt="Almoço completo e equilibrado" loading="lazy" width="500" height="500" />
+            <figcaption>Almoço Completo</figcaption>
+          </figure>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══ SEÇÃO 5 · O QUE VOCÊ RECEBE (DARK BASE) ═══ -->
+  <section class="section section--dk" id="recebe">
+    <div class="container">
+
+      <h2 class="section__title reveal">O que você recebe</h2>
+
+      <div class="receives__grid">
+
+        <!-- Produto principal -->
+        <div class="card-dk card-dk--featured receive-main reveal">
+          <div class="icon-box icon-box--lg icon-box--a1"><i data-lucide="utensils"></i></div>
+          <span class="badge badge--product">APP PRINCIPAL</span>
+          <h3 class="t-subhead receive__title">Planejador de Cardápio Inteligente</h3>
+          <ul class="receive__list">
+            <li><i data-lucide="check"></i> Monta a semana inteira com 1 clique</li>
+            <li><i data-lucide="check"></i> Gera lista automática por corredor</li>
+            <li><i data-lucide="check"></i> Calorias e macros em tempo real</li>
+            <li><i data-lucide="check"></i> Adapta às suas preferências e intolerâncias</li>
+          </ul>
+        </div>
+
+        <!-- Bônus 1 -->
+        <div class="card-dk card-dk--bonus reveal">
+          <div class="bonus__img-wrap">
+            <img src="images/bonus1-calculadora-marmita.webp" alt="Calculadora de Marmita — marmitas organizadas" loading="lazy" width="500" height="500" class="bonus__img" />
+          </div>
+          <div class="bonus__body">
+            <span class="badge badge--bonus">BÔNUS 1</span>
+            <h3 class="t-subhead receive__title">Calculadora de Marmita</h3>
+            <p class="receive__desc">Porção exata por objetivo — sem chute, sem desperdício.</p>
+          </div>
+        </div>
+
+        <!-- Bônus 2 -->
+        <div class="card-dk card-dk--bonus reveal">
+          <div class="bonus__img-wrap">
+            <img src="images/bonus2-sobrou-geladeira.webp" alt="Sobrou na Geladeira — ingredientes para reaproveitar" loading="lazy" width="500" height="500" class="bonus__img" />
+          </div>
+          <div class="bonus__body">
+            <span class="badge badge--bonus">BÔNUS 2</span>
+            <h3 class="t-subhead receive__title">Sobrou na Geladeira</h3>
+            <p class="receive__desc">Receita gerada pelos ingredientes que já estão na sua geladeira.</p>
+          </div>
+        </div>
+
+        <!-- Bônus 3 -->
+        <div class="card-dk card-dk--bonus reveal">
+          <div class="bonus__img-wrap">
+            <img src="images/bonus3-fds-restaurante.webp" alt="Guia Anti-Furo de Final de Semana" loading="lazy" width="500" height="500" class="bonus__img" />
+          </div>
+          <div class="bonus__body">
+            <span class="badge badge--bonus">BÔNUS 3</span>
+            <h3 class="t-subhead receive__title">Guia Anti-Furo de Final de Semana</h3>
+            <p class="receive__desc">O que pedir quando sair sem estragar a dieta.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SEÇÃO 6 · CONTRASTE (LIGHT BASE) ═══ -->
+  <section class="section section--lt" id="contraste">
+    <div class="container">
+
+      <h2 class="section__title reveal">Por que um app e não mais um PDF?</h2>
+
+      <div class="contrast__wrapper reveal">
+        <div class="contrast__col contrast__col--pdf">
+          <div class="contrast__header contrast__header--pdf">
+            <i data-lucide="file-text"></i>
+            <span class="contrast__label contrast__label--pdf">PDF / Planilha</span>
+          </div>
+          <ul class="contrast__list">
+            <li class="contrast__item contrast__item--bad"><i data-lucide="x"></i> Você procura a receita</li>
+            <li class="contrast__item contrast__item--bad"><i data-lucide="x"></i> Você faz a lista manual</li>
+            <li class="contrast__item contrast__item--bad"><i data-lucide="x"></i> Você calcula as calorias</li>
+            <li class="contrast__item contrast__item--bad"><i data-lucide="x"></i> Você usa uma vez e some</li>
+          </ul>
+        </div>
+        <div class="contrast__vs">VS</div>
+        <div class="contrast__col contrast__col--app">
+          <div class="contrast__header contrast__header--app">
+            <i data-lucide="smartphone"></i>
+            <span class="contrast__label contrast__label--app">Protocolo Geladeira Inteligente</span>
+          </div>
+          <ul class="contrast__list">
+            <li class="contrast__item contrast__item--good"><i data-lucide="check"></i> O app monta o cardápio</li>
+            <li class="contrast__item contrast__item--good"><i data-lucide="check"></i> Lista gerada automática</li>
+            <li class="contrast__item contrast__item--good"><i data-lucide="check"></i> Calculado em tempo real</li>
+            <li class="contrast__item contrast__item--good"><i data-lucide="check"></i> Usa toda semana, sempre</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="contrast__tagline reveal">
+        Enquanto elas ainda vendem papel digital, <strong>a gente entrega tecnologia.</strong>
+      </p>
+
+    </div>
+  </section>
+
+  <!-- ═══ SEÇÃO 7 · PROVA SOCIAL (DARK SURFACE) ═══ -->
+  <section class="section section--dk-s" id="depoimentos">
+    <div class="container">
+
+      <h2 class="section__title reveal">O que estão dizendo</h2>
+
+      <div class="testimonials__grid">
+
+        <div class="card-dk testimonial reveal">
+          <div class="testimonial__header">
+            <div class="testimonial__avatar">
+              <img src="images/avatar-maria-clara.webp" alt="Maria Clara S." width="48" height="48" loading="lazy">
+            </div>
+            <div>
+              <strong class="testimonial__name">Maria Clara S.</strong>
+              <span class="testimonial__city">São Paulo, SP</span>
+            </div>
+          </div>
+          <div class="testimonial__stars">
+            <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i>
+          </div>
+          <p class="testimonial__text">"Finalmente parei de ficar perdida no mercado. O app monta tudo, é só seguir. Na primeira semana já emagreci 2kg sem passar fome!"</p>
+        </div>
+
+        <div class="card-dk testimonial reveal">
+          <div class="testimonial__header">
+            <div class="testimonial__avatar">
+              <img src="images/avatar-fernanda.webp" alt="Fernanda R." width="48" height="48" loading="lazy">
+            </div>
+            <div>
+              <strong class="testimonial__name">Fernanda R.</strong>
+              <span class="testimonial__city">Belo Horizonte, MG</span>
+            </div>
+          </div>
+          <div class="testimonial__stars">
+            <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i>
+          </div>
+          <p class="testimonial__text">"Já tinha comprado 4 cursos de emagrecimento. Nenhum mudou minha rotina. O Protocolo Geladeira Inteligente mudou porque é prático de verdade."</p>
+        </div>
+
+        <div class="card-dk testimonial reveal">
+          <div class="testimonial__header">
+            <div class="testimonial__avatar">
+              <img src="images/avatar-juliana.webp" alt="Juliana M." width="48" height="48" loading="lazy">
+            </div>
+            <div>
+              <strong class="testimonial__name">Juliana M.</strong>
+              <span class="testimonial__city">Curitiba, PR</span>
+            </div>
+          </div>
+          <div class="testimonial__stars">
+            <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i>
+          </div>
+          <p class="testimonial__text">"Moro sozinha, trabalho o dia todo. O app me salvou. Agora faço as compras da semana em 15 minutos e ainda como bem. Vale muito mais do que paguei."</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SEÇÃO 8 · OFERTA (LIGHT BASE) ═══ -->
+  <section class="section section--lt section--offer" id="oferta">
+    <div class="container">
+      <div class="offer__card reveal">
+
+        <h2 class="offer__title">
+          Acesso completo ao<br />
+          <span class="c-a1d">Protocolo Geladeira Inteligente</span>
+        </h2>
+
+        <ul class="offer__includes">
+          <li><i data-lucide="circle-check-big"></i> App Principal — Planejador de Cardápio Inteligente</li>
+          <li><i data-lucide="circle-check-big"></i> Bônus 1 — Calculadora de Marmita</li>
+          <li><i data-lucide="circle-check-big"></i> Bônus 2 — Sobrou na Geladeira</li>
+          <li><i data-lucide="circle-check-big"></i> Bônus 3 — Guia Anti-Furo de Final de Semana</li>
+        </ul>
+
+        <div class="offer__pricing">
+          <span class="offer__from">De <s>R$ 197,00</s></span>
+          <div class="offer__price-main">
+            <span class="offer__currency">R$</span>
+            <span class="offer__amount">97</span>
+            <span class="offer__cents">,00</span>
+          </div>
+          <span class="offer__installments">ou 12x de <strong>R$ 9,83</strong></span>
+        </div>
+
+        <a href="#" class="btn btn--cta">
+          QUERO MEU APP AGORA — R$ 97,00
+          <span class="btn__icon"><i data-lucide="arrow-right"></i></span>
+        </a>
+
+        <div class="offer__sub">
+          <span class="offer__sub-item"><i data-lucide="zap"></i> Acesso imediato</span>
+          <span class="offer__sub-item"><i data-lucide="smartphone"></i> Funciona em qualquer tela</span>
+          <span class="offer__sub-item"><i data-lucide="ban"></i> Sem mensalidade</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SEÇÃO 9 · GARANTIA (DARK BASE) ═══ -->
+  <section class="section section--dk section--guarantee" id="garantia">
+    <div class="container">
+      <div class="card-dk guarantee__card reveal">
+
+        <div class="icon-box icon-box--lg icon-box--circle icon-box--a1">
+          <i data-lucide="shield-check"></i>
+        </div>
+
+        <h2 class="guarantee__title">7 dias de garantia total</h2>
+
+        <p class="guarantee__text">
+          Se você acessar, usar o app e achar que não valeu, eu devolvo
+          <strong>100% do seu dinheiro.</strong> Sem perguntas, sem burocracia.
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ EXPERT ═══ -->
+  <section class="section section--lt expert-section" id="expert">
+    <div class="container">
+      <div class="expert__card reveal">
+
+        <div class="expert__photo-col">
+          <div class="expert__photo-wrap">
+            <img
+              src="images/expert-camila.webp"
+              alt="Camila Duarte — Especialista em Nutrição e Planejamento Alimentar"
+              class="expert__photo"
+              width="400"
+              height="533"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+        <div class="expert__content">
+          <span class="expert__label">QUEM ESTÁ POR TRÁS DO PROTOCOLO</span>
+          <h2 class="expert__name">Camila Duarte</h2>
+          <span class="expert__title">Especialista em Alimentação Prática e Planejamento de Cardápio</span>
+
+          <p class="expert__bio">
+            Depois de anos ajudando mulheres a emagrecer sem passar fome, percebi que
+            o problema nunca era a falta de receita — era a falta de sistema.
+          </p>
+          <p class="expert__bio">
+            Desenvolvi o Protocolo Geladeira Inteligente para resolver exatamente isso:
+            transformar o caos do "o que vou comer hoje?" em um processo automático,
+            personalizado e sem estresse. Já acompanhei mais de 4.800 mulheres que
+            pararam de recomeçar a dieta toda segunda-feira.
+          </p>
+
+          <ul class="expert__badges">
+            <li><i data-lucide="check-circle-2"></i> +8 anos de experiência em nutrição comportamental</li>
+            <li><i data-lucide="check-circle-2"></i> Especialização em planejamento alimentar prático</li>
+            <li><i data-lucide="check-circle-2"></i> Mais de 4.800 mulheres atendidas</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 Protocolo Geladeira Inteligente. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
