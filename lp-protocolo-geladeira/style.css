@@ -497,8 +497,8 @@ ul { list-style: none; }
 
 @media (min-width: 768px) {
   .hero {
-    align-items: center;   /* desktop: centralizado verticalmente */
-    padding: 72px 0 64px;
+    align-items: center;
+    padding: 48px 0 56px;
   }
 }
 
