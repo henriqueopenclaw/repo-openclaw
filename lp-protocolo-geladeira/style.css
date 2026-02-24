@@ -302,10 +302,10 @@ ul { list-style: none; }
 }
 
 .badge--product {
-  color: var(--a1);
-  background: var(--a1-10);
-  border: 1px solid var(--a1-30);
-}
+  color: #ffffff;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.25);
+} /* branco: legível em card escuro */
 
 .badge--bonus {
   color: var(--a2);
@@ -605,7 +605,7 @@ ul { list-style: none; }
 .hero__headline .c-a1 {
   font-style: italic;
   font-variation-settings: 'opsz' 144;
-  color: var(--a1);
+  color: var(--a2); /* coral: contraste visível em hero escuro */
 }
 
 .hero__sub {
@@ -634,7 +634,7 @@ ul { list-style: none; }
   color: var(--td-body);
 }
 
-.hero__trust-item svg { color: var(--a1); width: 14px; height: 14px; flex-shrink: 0; }
+.hero__trust-item svg { color: var(--a2); width: 14px; height: 14px; flex-shrink: 0; } /* coral: visível em hero escuro */
 
 /* ════════════════════════════════════════════════════════════════
    SEÇÃO 2 · PROBLEMA (LIGHT)
@@ -860,7 +860,7 @@ ul { list-style: none; }
   color: var(--td-body);
 }
 
-.receive__list li svg { color: var(--a1); flex-shrink: 0; width: 15px; height: 15px; }
+.receive__list li svg { color: var(--a2); flex-shrink: 0; width: 15px; height: 15px; } /* coral: visível em card escuro */
 
 .receive__desc { font-size: 0.88rem; color: var(--td-muted); line-height: 1.6; }
 @media (min-width: 480px) { .receive__desc { font-size: 0.93rem; } }
@@ -1256,7 +1256,7 @@ details[open] > .faq__answer {
 
 .guarantee__text { font-size: 0.98rem; color: var(--td-body); line-height: 1.8; }
 @media (min-width: 480px) { .guarantee__text { font-size: 1.05rem; } }
-.guarantee__text strong { color: var(--a1); }
+.guarantee__text strong { color: var(--a2); } /* coral: visível em seção escura */
 
 /* ─── BONUS CARDS COM IMAGEM ─────────────────────────────────── */
 .card-dk--bonus {
