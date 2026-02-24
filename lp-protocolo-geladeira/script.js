@@ -1,25 +1,70 @@
 /**
- * Protocolo Geladeira Inteligente — script.js
- * Funcionalidades: Scroll Reveal (Intersection Observer) + Smooth Scroll
+ * Protocolo Geladeira Inteligente — script.js v4 (Redesign)
+ *
+ * Funcionalidades:
+ *   1. Page Load — staggered reveal orquestrado para o hero
+ *   2. Scroll Reveal — IntersectionObserver com stagger por pai
+ *   3. Smooth Scroll — âncoras internas
+ *   4. Lucide Icons — inicialização
+ *
  * Sem dependências externas. Vanilla JS puro.
  */
 
 (function () {
   'use strict';
 
-  /* ─── SCROLL REVEAL ──────────────────────────────────────── */
+  /* ─── PAGE LOAD — hero orquestrado ─────────────────────────
+   * Os elementos do hero entram em sequência logo no load,
+   * sem aguardar scroll. Cada filho do hero__content recebe
+   * um delay crescente (stagger), criando o reveal fluido.
+   * A imagem entra da direita com delay ligeiramente maior.
+   * ─────────────────────────────────────────────────────────── */
+  function initPageLoad() {
+    var heroContent  = document.querySelector('.hero__content');
+    var heroImageCol = document.querySelector('.hero__image-col');
+
+    if (heroContent) {
+      var heroItems = heroContent.querySelectorAll('.reveal');
+      heroItems.forEach(function (el, i) {
+        // Stagger: 80ms base + 130ms por elemento
+        el.style.transitionDelay = (80 + i * 130) + 'ms';
+      });
+    }
+
+    if (heroImageCol) {
+      // Imagem entra após o conteúdo principal
+      heroImageCol.style.transitionDelay = '360ms';
+    }
+
+    // Dispara em requestAnimationFrame para garantir que
+    // o browser já calculou o layout antes de animar
+    requestAnimationFrame(function () {
+      requestAnimationFrame(function () {
+        document.querySelectorAll('.hero .reveal').forEach(function (el) {
+          el.classList.add('is-visible');
+        });
+      });
+    });
+  }
+
+  /* ─── SCROLL REVEAL ─────────────────────────────────────────
+   * Elementos com .reveal fora do hero são ativados pelo
+   * IntersectionObserver conforme entram na viewport.
+   * Stagger automático por posição entre irmãos .reveal.
+   * ─────────────────────────────────────────────────────────── */
   function initScrollReveal() {
-    const elements = document.querySelectorAll('.reveal');
+    // Exclui elementos do hero (já tratados pelo initPageLoad)
+    var elements = Array.from(document.querySelectorAll('.reveal')).filter(function (el) {
+      return !el.closest('.hero');
+    });
 
     if (!elements.length) return;
 
-    // IntersectionObserver com threshold e rootMargin para uma revelação suave
-    const observer = new IntersectionObserver(
+    var observer = new IntersectionObserver(
       function (entries) {
         entries.forEach(function (entry) {
           if (entry.isIntersecting) {
             entry.target.classList.add('is-visible');
-            // Para de observar depois de revelar — performance
             observer.unobserve(entry.target);
           }
         });
@@ -30,16 +75,24 @@
       }
     );
 
-    elements.forEach(function (el, index) {
-      // Stagger delay baseado na ordem de aparição dentro do mesmo pai
-      const siblings = Array.from(el.parentElement.querySelectorAll('.reveal'));
-      const siblingIndex = siblings.indexOf(el);
+    elements.forEach(function (el) {
+      // Stagger por posição entre irmãos .reveal no mesmo pai
+      var siblings      = Array.from(el.parentElement.querySelectorAll('.reveal'));
+      var siblingIndex  = siblings.indexOf(el);
 
       if (siblingIndex > 0) {
-        el.style.transitionDelay = siblingIndex * 80 + 'ms';
+        el.style.transitionDelay = siblingIndex * 85 + 'ms';
       }
 
       observer.observe(el);
+    });
+  }
+
+  /* ─── PROBLEMA ITEMS — stagger na entrada ───────────────── */
+  function initProblemStagger() {
+    var items = document.querySelectorAll('.problem__item');
+    items.forEach(function (item, i) {
+      item.style.transitionDelay = i * 90 + 'ms';
     });
   }
 
@@ -47,33 +100,21 @@
   function initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
       anchor.addEventListener('click', function (e) {
-        const targetId = this.getAttribute('href');
+        var targetId = this.getAttribute('href');
 
-        // Ignora links sem destino real
         if (!targetId || targetId === '#') return;
 
-        const targetEl = document.querySelector(targetId);
+        var targetEl = document.querySelector(targetId);
         if (!targetEl) return;
 
         e.preventDefault();
 
-        const headerOffset = 20; // Margem do topo
-        const elementPosition = targetEl.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        var headerOffset    = 20;
+        var elementPosition = targetEl.getBoundingClientRect().top;
+        var offsetPosition  = elementPosition + window.pageYOffset - headerOffset;
 
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: 'smooth',
-        });
+        window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
       });
-    });
-  }
-
-  /* ─── PROBLEMA ITEMS — animação de entrada escalonada ────── */
-  function initProblemStagger() {
-    const items = document.querySelectorAll('.problem__item');
-    items.forEach(function (item, i) {
-      item.style.transitionDelay = i * 90 + 'ms';
     });
   }
 
@@ -87,12 +128,12 @@
   /* ─── INICIALIZAÇÃO ──────────────────────────────────────── */
   function init() {
     initIcons();
+    initPageLoad();
     initProblemStagger();
     initScrollReveal();
     initSmoothScroll();
   }
 
-  // Aguarda o DOM estar pronto
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
   } else {
