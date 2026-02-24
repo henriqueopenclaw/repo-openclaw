@@ -8,11 +8,23 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <!-- Fraunces: display serif orgânico com optical sizes (italic nos accents) -->
-  <!-- DM Sans: body humanista, clean sem ser genérico como Inter              -->
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,400;1,9..144,700;1,9..144,900&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;0,9..40,800;1,9..40,400&display=swap" rel="stylesheet" />
+  <!-- Nunito Sans: body arredondado, acolhedor, não-genérico — brand book oficial -->
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,700;1,9..144,400&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- ═══ HEADER FIXO COM LOGO ═══ -->
+  <header class="site-header" role="banner">
+    <div class="container site-header__inner">
+      <a href="#hero" class="site-header__logo" aria-label="Protocolo Geladeira Inteligente — início">
+        <img src="images/logo.svg" alt="Protocolo Geladeira Inteligente" width="220" height="55" loading="eager" />
+      </a>
+      <a href="#oferta" class="btn btn--nav">
+        Quero meu app <span class="btn__icon"><i data-lucide="arrow-right"></i></span>
+      </a>
+    </div>
+  </header>
 
   <!-- ═══ SEÇÃO 1 · HERO (DARK BASE) ═══ -->
   <section class="hero" id="hero">

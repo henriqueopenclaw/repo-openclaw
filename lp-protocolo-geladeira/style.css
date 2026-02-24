@@ -34,8 +34,8 @@ html {
 }
 
 body {
-  font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
-  background: #0C1A11;
+  font-family: 'Nunito Sans', system-ui, -apple-system, sans-serif;
+  background: #1A2E1A;
   color: #E8F5EE;
   line-height: 1.75;
   -webkit-font-smoothing: antialiased;
@@ -50,30 +50,35 @@ ul { list-style: none; }
 /* ─── DESIGN TOKENS ─────────────────────────────────────────── */
 :root {
   /* Accent 1 — produto, checks, CTA hero */
-  --a1:       #3EC878;
-  --a1-dim:   #2EA862;
-  --a1-glow:  rgba(62,200,120,0.22);
-  --a1-10:    rgba(62,200,120,0.10);
-  --a1-22:    rgba(62,200,120,0.22);
-  --a1-30:    rgba(62,200,120,0.30);
+  --a1:       #2D5016;
+  --a1-dim:   #1F3A10;
+  --a1-glow:  rgba(45,80,22,0.22);
+  --a1-10:    rgba(45,80,22,0.10);
+  --a1-22:    rgba(45,80,22,0.22);
+  --a1-30:    rgba(45,80,22,0.30);
 
   /* Accent 2 — urgência, bônus, CTA compra */
-  --a2:       #F4845F;
-  --a2-dim:   #E0684A;
-  --a2-10:    rgba(244,132,95,0.10);
-  --a2-28:    rgba(244,132,95,0.28);
+  --a2:       #FF6B6B;
+  --a2-dim:   #E05555;
+  --a2-10:    rgba(255,107,107,0.10);
+  --a2-28:    rgba(255,107,107,0.28);
+
+  /* Accent 3 — Âmbar Dourado (brand book) — selos, badges, destaques */
+  --a3:       #F4A429;
+  --a3-dim:   #D98E1A;
+  --a3-10:    rgba(244,164,41,0.10);
 
   /* Dark Backgrounds */
-  --dk-base:    #0C1A11;
-  --dk-surface: #102018;
-  --dk-card:    #162D1D;
-  --dk-card2:   #1B3522;
+  --dk-base:    #1A2E1A;
+  --dk-surface: #1F3522;
+  --dk-card:    #243D25;
+  --dk-card2:   #2D4E2E;
   --dk-border:  rgba(255,255,255,0.06);
   --dk-border-a: rgba(62,200,120,0.22);
 
   /* Light Backgrounds */
-  --lt-base:    #F4F9F1;
-  --lt-surface: #EBF3E7;
+  --lt-base:    #F9F4EE;
+  --lt-surface: #F0EAE0;
   --lt-card:    #FFFFFF;
   --lt-border:  rgba(0,0,0,0.08);
   --lt-border-a: rgba(46,168,98,0.30);
@@ -128,7 +133,55 @@ ul { list-style: none; }
 @media (min-width: 480px) { .container { padding: 0 20px; } }
 @media (min-width: 900px) { .container { padding: 0 var(--sp-3); } }
 
-/* ─── TIPOGRAFIA — Fraunces + DM Sans ───────────────────────── */
+/* ─── HEADER ─────────────────────────────────────────────────── */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #F9F4EE;
+  border-bottom: 1px solid rgba(45,80,22,0.12);
+  padding: 10px 0;
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.site-header__logo img {
+  height: 44px;
+  width: auto;
+  display: block;
+}
+
+.btn--nav {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--a2);
+  color: #fff;
+  font-family: 'Nunito Sans', system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 0.82rem;
+  letter-spacing: 0.03em;
+  padding: 10px 18px;
+  border-radius: 50px;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+.btn--nav:hover { background: var(--a2-dim); }
+
+.btn--nav .btn__icon {
+  display: flex;
+  align-items: center;
+  width: 14px;
+  height: 14px;
+}
+
+/* ─── TIPOGRAFIA — Fraunces + Nunito Sans ────────────────────── */
 
 /* DISPLAY — apenas hero */
 .t-display {
@@ -155,7 +208,7 @@ ul { list-style: none; }
 
 /* SUBHEAD — títulos de card / etapas (h3) */
 .t-subhead {
-  font-family: 'DM Sans', system-ui, sans-serif;
+  font-family: 'Nunito Sans', system-ui, sans-serif;
   font-size: 1rem;
   font-weight: 700;
   line-height: 1.35;
@@ -238,7 +291,7 @@ ul { list-style: none; }
 /* ─── BADGE ─────────────────────────────────────────────────── */
 .badge {
   display: inline-block;
-  font-family: 'DM Sans', system-ui, sans-serif;
+  font-family: 'Nunito Sans', system-ui, sans-serif;
   font-size: 0.62rem;
   font-weight: 800;
   letter-spacing: 0.12em;
@@ -337,7 +390,7 @@ ul { list-style: none; }
   align-items: center;
   justify-content: center;
   gap: var(--sp-1);
-  font-family: 'DM Sans', system-ui, sans-serif;
+  font-family: 'Nunito Sans', system-ui, sans-serif;
   font-weight: 800;
   letter-spacing: 0.04em;
   border: none;
@@ -520,7 +573,7 @@ ul { list-style: none; }
 
 .hero__tag {
   display: inline-block;
-  font-family: 'DM Sans', system-ui, sans-serif;
+  font-family: 'Nunito Sans', system-ui, sans-serif;
   font-size: 0.62rem;
   font-weight: 800;
   letter-spacing: 0.12em;
@@ -998,7 +1051,7 @@ ul { list-style: none; }
   padding: 18px 20px;
   cursor: pointer;
   list-style: none;
-  font-family: 'DM Sans', system-ui, sans-serif;
+  font-family: 'Nunito Sans', system-ui, sans-serif;
   font-size: 0.95rem;
   font-weight: 700;
   color: var(--tl-hi);
@@ -1024,7 +1077,7 @@ ul { list-style: none; }
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-family: 'DM Sans', system-ui, sans-serif;
+  font-family: 'Nunito Sans', system-ui, sans-serif;
   font-size: 1.25rem;
   font-weight: 400;
   line-height: 1;
