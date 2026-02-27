@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 70" role="img" aria-labelledby="logo-md-title">
+  <title id="logo-md-title">Decodificador de Ciúme™ — Mono Dark</title>
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,700;1,500&amp;display=swap');
+      .c-heart { fill: #1A0A10; }
+      .c-pulse { fill: none; stroke: #5A1A30; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+      .c-dot   { fill: #3A0A20; }
+      .t-main  { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 26px; font-weight: 700; fill: #1A0A10; letter-spacing: 0.5px; }
+      .t-sub   { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; font-style: italic; font-weight: 500; fill: #3A1525; letter-spacing: 1.5px; }
+    </style>
+  </defs>
+  <g transform="translate(3, 5)">
+    <path class="c-heart" d="M 30,52 C 28,48 5,37 5,22 C 5,11 13,4 21,4 C 26,4 29,8 30,12 C 31,8 34,4 39,4 C 47,4 55,11 55,22 C 55,37 32,48 30,52 Z"/>
+    <polyline class="c-pulse" points="7,29 16,29 18,33 21.5,16 25,33 27.5,29 53,29"/>
+    <circle class="c-dot" cx="21.5" cy="16" r="2.2"/>
+  </g>
+  <text class="t-main" x="76" y="33">Decodificador</text>
+  <text class="t-sub"  x="77" y="54">de Ciúme™</text>
+</svg>
