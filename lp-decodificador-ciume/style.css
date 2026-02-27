@@ -1371,3 +1371,25 @@ em {
   margin: 0 auto 1rem;
   opacity: 0.7;
 }
+
+/* ── Ancoragem de preço nos bônus ── */
+.bonus-card__price {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.25rem 0 0.75rem;
+}
+.bonus-card__de {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.4);
+  text-decoration: line-through;
+}
+.bonus-card__gratis {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: #E8805A;
+  letter-spacing: 0.5px;
+  background: rgba(232,128,90,0.15);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
