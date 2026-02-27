@@ -1352,24 +1352,28 @@ em {
 /* ── Header ── */
 .site-header {
   background: #fff;
-  padding: 1rem 0;
+  padding: 0.6rem 0;
   border-bottom: 1px solid rgba(139,34,82,0.1);
   position: sticky;
   top: 0;
   z-index: 100;
 }
 .site-header__logo {
-  height: 44px;
+  height: 36px;
   width: auto;
   display: block;
 }
+@media (min-width: 640px) {
+  .site-header { padding: 1rem 0; }
+  .site-header__logo { height: 44px; }
+}
 /* ── Footer Logo ── */
 .footer__logo {
-  height: 40px;
+  height: 38px;
   width: auto;
   display: block;
   margin: 0 auto 1rem;
-  opacity: 0.7;
+  opacity: 0.9;
 }
 
 /* ── Ancoragem de preço nos bônus ── */
