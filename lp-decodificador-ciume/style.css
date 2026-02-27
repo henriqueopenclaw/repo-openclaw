@@ -1397,3 +1397,124 @@ em {
   padding: 2px 8px;
   border-radius: 4px;
 }
+
+/* ══ BÔNUS — novo layout americano ══ */
+.section--bonus { background: #F9F4F6; }
+.bonus-header { text-align: center; margin-bottom: 2.5rem; }
+.bonus-header__pre { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; color: #8B2252; font-weight: 700; margin-bottom: 0.4rem; }
+.bonus-header__title { font-size: 2rem; font-weight: 900; color: #1A1A2E; margin-bottom: 0.5rem; }
+.bonus-header__value { color: #555; font-size: 1rem; }
+.bonus-header__strike { text-decoration: line-through; color: #aaa; }
+
+.bonus-stack { display: flex; flex-direction: column; gap: 1.25rem; max-width: 720px; margin: 0 auto; }
+
+.bonus-row {
+  display: flex;
+  gap: 1.25rem;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(139,34,82,0.08);
+  border: 1px solid rgba(139,34,82,0.1);
+}
+.bonus-row__img {
+  position: relative;
+  flex-shrink: 0;
+  width: 110px;
+}
+.bonus-row__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.bonus-row__tag {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  background: #8B2252;
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  padding: 3px 8px;
+  border-radius: 0 4px 4px 0;
+}
+.bonus-row__content { padding: 1.1rem 1.25rem 1.1rem 0; flex: 1; }
+.bonus-row__top { display: flex; align-items: flex-start; justify-content: space-between; gap: 0.5rem; margin-bottom: 0.4rem; }
+.bonus-row__title { font-size: 1rem; font-weight: 800; color: #1A1A2E; margin: 0; }
+.bonus-row__price { display: flex; flex-direction: column; align-items: flex-end; flex-shrink: 0; }
+.bonus-row__valor { font-size: 0.75rem; color: #aaa; white-space: nowrap; }
+.bonus-row__valor s { color: #ccc; }
+.bonus-row__free {
+  font-size: 0.75rem;
+  font-weight: 900;
+  color: #fff;
+  background: #E8805A;
+  padding: 2px 8px;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+  margin-top: 2px;
+}
+.bonus-row__scenario {
+  font-style: italic;
+  font-size: 0.82rem;
+  color: #8B2252;
+  border-left: 3px solid #E8805A;
+  padding-left: 0.6rem;
+  margin: 0.4rem 0 0.6rem;
+  line-height: 1.4;
+}
+.bonus-row__desc { font-size: 0.85rem; color: #444; line-height: 1.6; margin: 0; }
+
+/* ══ OFERTA — value stack americano ══ */
+.oferta-box__pre { text-align: center; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; color: rgba(255,255,255,0.5); margin-bottom: 0.5rem; }
+.oferta-stack { list-style: none; padding: 0; margin: 1.5rem 0; display: flex; flex-direction: column; gap: 0; }
+.oferta-stack__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.oferta-stack__item i { color: #4ADE80; flex-shrink: 0; width: 20px; height: 20px; margin-top: 2px; }
+.oferta-stack__info { flex: 1; }
+.oferta-stack__name { display: block; font-weight: 700; color: #fff; font-size: 0.95rem; }
+.oferta-stack__desc { display: block; font-size: 0.78rem; color: rgba(255,255,255,0.45); margin-top: 1px; }
+.oferta-stack__price { flex-shrink: 0; font-size: 0.85rem; color: rgba(255,255,255,0.3); white-space: nowrap; }
+
+.oferta-total {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 1.1rem 1.25rem;
+  margin: 1.5rem 0;
+}
+.oferta-total__row { display: flex; justify-content: space-between; align-items: center; padding: 0.3rem 0; font-size: 0.9rem; color: rgba(255,255,255,0.6); }
+.oferta-total__strike { text-decoration: line-through; color: rgba(255,255,255,0.3); }
+.oferta-total__row--saving { color: #4ADE80; font-weight: 600; }
+.oferta-total__saving { color: #4ADE80; font-weight: 800; }
+.oferta-total__divider { border-top: 1px solid rgba(255,255,255,0.15); margin: 0.6rem 0; }
+.oferta-total__row--final { font-size: 1.1rem; font-weight: 800; color: #fff; }
+.oferta-total__price { font-size: 2.2rem; font-weight: 900; color: #E8805A; line-height: 1; }
+
+.garantia-box-mini {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 10px;
+  padding: 1rem;
+  margin-top: 1rem;
+  text-align: left;
+}
+.garantia-box-mini i { color: #4ADE80; flex-shrink: 0; width: 22px; height: 22px; margin-top: 1px; }
+.garantia-box-mini strong { display: block; color: #fff; font-size: 0.9rem; margin-bottom: 2px; }
+.garantia-box-mini span { font-size: 0.8rem; color: rgba(255,255,255,0.5); line-height: 1.4; }
+
+@media (max-width: 500px) {
+  .bonus-row__img { width: 80px; }
+  .bonus-row__title { font-size: 0.88rem; }
+  .bonus-row__content { padding: 0.9rem 1rem 0.9rem 0; }
+}
