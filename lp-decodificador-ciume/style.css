@@ -1947,20 +1947,10 @@ h1, h2, h3,
 }
 
 /* ── Animate on reveal — mais suave ── */
-.reveal {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-}
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
+.reveal { opacity: 1; transform: none; }
+.reveal.visible { opacity: 1; transform: none; }
 
-/* ── Scroll animations staggered ── */
-.reveal:nth-child(2) { transition-delay: 0.1s; }
-.reveal:nth-child(3) { transition-delay: 0.2s; }
-.reveal:nth-child(4) { transition-delay: 0.3s; }
+
 
 /* ── Depoimentos — card mais elegante ── */
 .depo-card {
