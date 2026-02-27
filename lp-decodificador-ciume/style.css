@@ -1606,3 +1606,65 @@ em {
 .mec-novo__text { font-size: 0.95rem; line-height: 1.65; margin: 0 0 0.5rem; color: rgba(255,255,255,0.9); }
 .mec-novo__text strong { color: #fff; }
 .mec-novo__text em { color: #F5E6E8; font-style: normal; }
+
+/* ══════════════════════════════════════
+   DESKTOP FIXES — ≥768px e ≥1024px
+══════════════════════════════════════ */
+
+/* Container máximo no desktop */
+@media (min-width: 768px) {
+  .container { max-width: 800px; }
+
+  /* Hero centralizado com mais respiro */
+  .hero__inner {
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .hero__image-wrap { max-width: 480px; }
+  .trust-list { justify-content: center; }
+
+  /* Mecanismo: duas colunas no desktop */
+  .section--mecanismo .container { max-width: 860px; }
+  .mec-img-wrap { max-height: 340px; border-radius: var(--r-lg, 20px); }
+  .mec-content { max-width: 720px; }
+  .mec-title { font-size: 1.75rem; }
+
+  /* Dor: centralizado */
+  .pain-list { max-width: 560px; margin: 0 auto; }
+
+  /* Promessa: max-width razoável */
+  .promessa-grid { max-width: 640px; margin: 0 auto 1.5rem; }
+  .promessa-item { align-items: flex-start; }
+
+  /* Bônus: layout em linha mantido, mas com max-width menor e centralizado */
+  .bonus-stack { max-width: 680px; }
+  .bonus-header { max-width: 680px; margin: 0 auto 2.5rem; }
+  .bonus-row { max-width: 680px; }
+  .bonus-row__img { width: 140px; }
+
+  /* Depoimentos: 2 colunas */
+  .depo-grid { grid-template-columns: 1fr 1fr; max-width: 680px; margin: 0 auto; }
+
+  /* Oferta: box centralizado, mais compacto */
+  .oferta-box { max-width: 560px; }
+
+  /* Especialista: max-width */
+  .especialista-card { max-width: 680px; }
+
+  /* Urgency bar: inline */
+  .urgency-bar { flex-wrap: nowrap; }
+
+  /* Countdown oferta */
+  .countdown-oferta { max-width: 400px; margin-left: auto; margin-right: auto; }
+}
+
+@media (min-width: 1024px) {
+  .container { max-width: 860px; }
+  .bonus-row__img { width: 160px; }
+  .mec-img-wrap { max-height: 380px; }
+
+  /* Especialista: side by side melhor */
+  .especialista-card { padding: 2.5rem; gap: 2.5rem; }
+  .especialista-card__photo-wrap { width: 140px; height: 140px; }
+}
