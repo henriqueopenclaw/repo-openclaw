@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- base href removido: paths relativos funcionam direto no subdomínio -->
+  <!-- base href apenas para dev server; Vercel usa subdomínio próprio sem base href -->
+  <!-- <base href="/lp/decodificador-ciume/" /> -->
   <title>Decodificador de Ciúme™ — Descubra seu padrão em 5 minutos</title>
   <meta name="description" content="Um diagnóstico interativo que identifica o seu padrão de ciúme em 5 minutos e entrega um plano concreto pra essa semana. Por R$10." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -412,7 +413,24 @@
     </div>
   </section>
 
-  <!-- ═══ FOOTER ═══ -->
+  <!-- ═══ ESPECIALISTA ═══ -->
+  <section class="section section--especialista">
+    <div class="container">
+      <div class="especialista-card reveal">
+        <div class="especialista-card__photo-wrap">
+          <img src="images/especialista.jpg" alt="Dra. Camila Torres" class="especialista-card__photo" loading="lazy" />
+        </div>
+        <div class="especialista-card__content">
+          <span class="badge badge--product">Criado por</span>
+          <h3 class="especialista-card__name">Dra. Camila Torres</h3>
+          <p class="especialista-card__title">Psicóloga Clínica · Especialista em Vínculos Afetivos</p>
+          <p class="especialista-card__bio">Com mais de 12 anos trabalhando com casais e relacionamentos, Camila percebeu que a maioria das pessoas sabia que tinha ciúme — mas ninguém conseguia explicar de onde ele vinha. Esse diagnóstico nasceu da sala de atendimento: uma ferramenta para o que a consciência sozinha não resolve.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- ═══ FOOTER ═══ -->
   <footer class="footer">
     <div class="container">
       <p class="footer__brand">Decodificador de Ciúme™</p>
