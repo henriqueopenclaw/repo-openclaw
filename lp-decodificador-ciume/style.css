@@ -1442,7 +1442,7 @@ em {
 }
 .bonus-row__content { padding: 1.1rem 1.25rem 1.1rem 0; flex: 1; }
 .bonus-row__top { display: flex; align-items: flex-start; justify-content: space-between; gap: 0.5rem; margin-bottom: 0.4rem; }
-.bonus-row__title { font-size: 1rem; font-weight: 800; color: #1A1A2E; margin: 0; }
+.bonus-row__title { font-size: 1.15rem; font-weight: 900; color: #1A1A2E; margin: 0; line-height: 1.2; }
 .bonus-row__price { display: flex; flex-direction: column; align-items: flex-end; flex-shrink: 0; }
 .bonus-row__valor { font-size: 0.75rem; color: #aaa; white-space: nowrap; }
 .bonus-row__valor s { color: #ccc; }
@@ -1484,19 +1484,20 @@ em {
 .oferta-stack__price { flex-shrink: 0; font-size: 0.85rem; color: rgba(255,255,255,0.55); white-space: nowrap; }
 
 .oferta-total {
-  background: rgba(255,255,255,0.1);
-  border: 1px solid rgba(255,255,255,0.2);
-  border-radius: 12px;
-  padding: 1.1rem 1.25rem;
+  background: rgba(255,255,255,0.08);
+  border: 2px solid rgba(232,128,90,0.5);
+  border-radius: 16px;
+  padding: 1.25rem 1.5rem;
   margin: 1.5rem 0;
+  box-shadow: 0 0 24px rgba(232,128,90,0.15);
 }
-.oferta-total__row { display: flex; justify-content: space-between; align-items: center; padding: 0.3rem 0; font-size: 0.9rem; color: rgba(255,255,255,0.8); }
+.oferta-total__row { display: flex; justify-content: space-between; align-items: center; padding: 0.4rem 0; font-size: 0.95rem; color: rgba(255,255,255,0.85); }
 .oferta-total__strike { text-decoration: line-through; color: rgba(255,255,255,0.5); }
-.oferta-total__row--saving { color: #4ADE80; font-weight: 600; }
-.oferta-total__saving { color: #4ADE80; font-weight: 800; }
+.oferta-total__row--saving { color: #4ADE80; font-weight: 700; font-size: 1rem; }
+.oferta-total__saving { color: #4ADE80; font-weight: 900; font-size: 1.1rem; }
 .oferta-total__divider { border-top: 1px solid rgba(255,255,255,0.15); margin: 0.6rem 0; }
-.oferta-total__row--final { font-size: 1.1rem; font-weight: 800; color: #fff; }
-.oferta-total__price { font-size: 2.2rem; font-weight: 900; color: #E8805A; line-height: 1; }
+.oferta-total__row--final { font-size: 1.2rem; font-weight: 900; color: #fff; padding-top: 0.6rem; }
+.oferta-total__price { font-size: 2.8rem; font-weight: 900; color: #E8805A; line-height: 1; text-shadow: 0 2px 12px rgba(232,128,90,0.4); }
 
 .garantia-box-mini {
   display: flex;
