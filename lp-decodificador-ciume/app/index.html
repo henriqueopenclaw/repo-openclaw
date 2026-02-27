@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Decodificador de Ciúme™</title>
+  <meta name="description" content="Descubra seu padrão de ciúme em 5 minutos e receba um plano concreto para essa semana." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══ CABEÇALHO DO APP ═══ -->
+  <header class="app-header">
+    <div class="app-header__brand">
+      <i data-lucide="search" class="app-header__icon"></i>
+      <span>Decodificador de Ciúme™</span>
+    </div>
+    <div class="progress-bar" id="progressBar" aria-hidden="true">
+      <div class="progress-bar__fill" id="progressFill"></div>
+    </div>
+    <div class="progress-label" id="progressLabel">Pergunta 1 de 5</div>
+  </header>
+
+  <!-- ═══ TELA DE BOAS-VINDAS ═══ -->
+  <main class="app-main">
+    <div class="screen screen--intro active" id="screenIntro">
+      <div class="screen__inner">
+        <div class="intro__icon">
+          <i data-lucide="scan-search"></i>
+        </div>
+        <h1 class="intro__title">Descubra seu padrão de ciúme</h1>
+        <p class="intro__desc">
+          5 situações reais do cotidiano. Sem julgamento — só comportamento observável.
+          Em menos de 5 minutos você descobre o que está por trás do seu ciúme.
+        </p>
+        <div class="intro__chips">
+          <div class="chip">
+            <i data-lucide="clock"></i>
+            <span>5 minutos</span>
+          </div>
+          <div class="chip">
+            <i data-lucide="shield-check"></i>
+            <span>Sem julgamento</span>
+          </div>
+          <div class="chip">
+            <i data-lucide="smartphone"></i>
+            <span>No celular</span>
+          </div>
+        </div>
+        <button class="btn btn--primary" id="btnStart">
+          Começar o diagnóstico
+          <i data-lucide="arrow-right" class="btn__icon"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- ═══ TELAS DE PERGUNTAS ═══ -->
+    <div class="screen screen--question" id="screenQuestion" hidden>
+      <div class="screen__inner">
+        <div class="question-context" id="questionContext"></div>
+        <h2 class="question__text" id="questionText"></h2>
+        <div class="options-list" id="optionsList"></div>
+      </div>
+    </div>
+
+    <!-- ═══ TELA DE RESULTADO ═══ -->
+    <div class="screen screen--result" id="screenResult" hidden>
+      <div class="screen__inner">
+        <div class="result__header">
+          <div class="result__badge" id="resultBadge"></div>
+          <h2 class="result__title" id="resultTitle"></h2>
+          <p class="result__desc" id="resultDesc"></p>
+        </div>
+
+        <div class="result__section">
+          <h3 class="result__section-title">
+            <i data-lucide="map"></i>
+            Seu circuito emocional
+          </h3>
+          <div class="circuit-map" id="circuitMap"></div>
+        </div>
+
+        <div class="result__section">
+          <h3 class="result__section-title">
+            <i data-lucide="target"></i>
+            Plano para essa semana
+          </h3>
+          <ul class="acoes-list" id="acoesList"></ul>
+        </div>
+
+        <div class="result__section result__section--frase">
+          <h3 class="result__section-title">
+            <i data-lucide="message-square-quote"></i>
+            Frase para a próxima conversa difícil
+          </h3>
+          <blockquote class="frase-destaque" id="fraseDestaque"></blockquote>
+        </div>
+
+        <div class="result__cta">
+          <p class="result__cta-text">Quer ir mais fundo? Os bônus do Decodificador continuam aqui:</p>
+          <div class="bonus-chips">
+            <div class="bonus-chip">
+              <i data-lucide="thermometer"></i>
+              <span>Termômetro de Crise™</span>
+            </div>
+            <div class="bonus-chip">
+              <i data-lucide="message-square-quote"></i>
+              <span>Biblioteca de Frases Difíceis™</span>
+            </div>
+            <div class="bonus-chip">
+              <i data-lucide="pen-line"></i>
+              <span>Espelho do Padrão™</span>
+            </div>
+          </div>
+          <button class="btn btn--secondary" id="btnRestart">
+            <i data-lucide="refresh-cw" class="btn__icon"></i>
+            Refazer o diagnóstico
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
