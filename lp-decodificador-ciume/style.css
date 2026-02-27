@@ -1581,3 +1581,28 @@ em {
   color: rgba(255,255,255,0.5);
   margin-top: 0.25rem;
 }
+
+/* ── Mecanismo Único ── */
+.section--mecanismo { background: #fff; padding-top: 0; }
+.mec-img-wrap { width: 100%; border-radius: 0 0 var(--r-lg,20px) var(--r-lg,20px); overflow: hidden; margin-bottom: 2rem; max-height: 260px; }
+.mec-img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.mec-content { max-width: 640px; margin: 0 auto; }
+.mec-title { font-size: 1.5rem; font-weight: 900; color: #1A1A2E; line-height: 1.25; margin-bottom: 1.5rem; }
+.mec-title em { color: #8B2252; font-style: normal; }
+
+.mec-old { background: #FDF4F6; border-radius: 16px; padding: 1.5rem; margin-bottom: 1.5rem; }
+.mec-old__intro { font-size: 0.95rem; color: #555; margin-bottom: 1rem; }
+.mec-old__list { list-style: none; padding: 0; margin: 0 0 1rem; display: flex; flex-direction: column; gap: 0.75rem; }
+.mec-old__list li { padding-left: 1.5rem; position: relative; color: #444; font-size: 0.9rem; line-height: 1.5; }
+.mec-old__list li::before { content: "✗"; position: absolute; left: 0; color: #C0395A; font-weight: 900; }
+.mec-old__verdict { font-size: 1rem; color: #1A1A2E; border-top: 1px solid rgba(139,34,82,0.15); padding-top: 0.75rem; margin: 0; }
+
+.mec-insight { margin-bottom: 1.5rem; padding: 1.25rem 1.5rem; border-left: 4px solid #8B2252; background: #FFF9FB; border-radius: 0 12px 12px 0; }
+.mec-insight__headline { font-size: 1.05rem; font-weight: 800; color: #1A1A2E; line-height: 1.35; margin-bottom: 0.75rem; }
+.mec-insight p { font-size: 0.9rem; color: #444; line-height: 1.65; margin: 0 0 0.5rem; }
+
+.mec-novo { background: linear-gradient(135deg, #8B2252, #C0395A); border-radius: 16px; padding: 1.5rem; color: #fff; }
+.mec-novo__badge { display: inline-block; background: #E8805A; color: #fff; font-size: 0.72rem; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 0.75rem; }
+.mec-novo__text { font-size: 0.95rem; line-height: 1.65; margin: 0 0 0.5rem; color: rgba(255,255,255,0.9); }
+.mec-novo__text strong { color: #fff; }
+.mec-novo__text em { color: #F5E6E8; font-style: normal; }
