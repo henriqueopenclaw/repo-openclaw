@@ -79,3 +79,74 @@ function init() {
 document.readyState === 'loading'
   ? document.addEventListener('DOMContentLoaded', init)
   : init();
+
+// ── Countdown de urgência ──
+(function() {
+  function pad(n) { return String(n).padStart(2,'0'); }
+
+  function formatDate(d) {
+    const days = ['domingo','segunda','terça','quarta','quinta','sexta','sábado'];
+    const months = ['jan','fev','mar','abr','mai','jun','jul','ago','set','out','nov','dez'];
+    return `${d.getDate()} de ${months[d.getMonth()]} (${days[d.getDay()]})`;
+  }
+
+  function tick() {
+    const now = new Date();
+    const midnight = new Date(now);
+    midnight.setHours(23, 59, 59, 0);
+    const diff = midnight - now;
+
+    if (diff <= 0) {
+      document.querySelectorAll('.countdown__timer').forEach(el => el.textContent = '00:00:00');
+      return;
+    }
+
+    const h = Math.floor(diff / 3600000);
+    const m = Math.floor((diff % 3600000) / 60000);
+    const s = Math.floor((diff % 60000) / 1000);
+    const str = `${pad(h)}:${pad(m)}:${pad(s)}`;
+    document.querySelectorAll('.countdown__timer').forEach(el => el.textContent = str);
+  }
+
+  function init() {
+    const now = new Date();
+    const dateStr = formatDate(now);
+
+    // Injetar banner de urgência logo após o header
+    const header = document.querySelector('.site-header');
+    if (header) {
+      const bar = document.createElement('div');
+      bar.className = 'urgency-bar';
+      bar.innerHTML = `
+        <span class="urgency-bar__text">
+          🔥 Valor promocional encerra <strong>HOJE, ${dateStr}</strong> às 23h59 —
+          após isso, volta para <s>R$47</s>
+        </span>
+        <span class="countdown__timer urgency-bar__timer">00:00:00</span>
+      `;
+      header.insertAdjacentElement('afterend', bar);
+    }
+
+    // Injetar countdown também dentro do box da oferta, antes do botão
+    const cta = document.querySelector('.btn--cta');
+    if (cta) {
+      const block = document.createElement('div');
+      block.className = 'countdown-oferta';
+      block.innerHTML = `
+        <div class="countdown-oferta__label">⏰ Esse preço encerra em</div>
+        <div class="countdown__timer countdown-oferta__timer">00:00:00</div>
+        <div class="countdown-oferta__sub">Hoje, ${dateStr} às 23h59</div>
+      `;
+      cta.insertAdjacentElement('beforebegin', block);
+    }
+
+    tick();
+    setInterval(tick, 1000);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
