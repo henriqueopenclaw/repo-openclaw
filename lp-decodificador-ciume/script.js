@@ -112,9 +112,9 @@ document.readyState === 'loading'
     const now = new Date();
     const dateStr = formatDate(now);
 
-    // Injetar banner de urgência logo após o header
-    const header = document.querySelector('.site-header');
-    if (header) {
+    // Injetar banner de urgência após a seção hero (abaixo da primeira dobra)
+    const heroSection = document.querySelector('.section--hero');
+    if (heroSection) {
       const bar = document.createElement('div');
       bar.className = 'urgency-bar';
       bar.innerHTML = `
@@ -124,7 +124,7 @@ document.readyState === 'loading'
         </span>
         <span class="countdown__timer urgency-bar__timer">00:00:00</span>
       `;
-      header.insertAdjacentElement('afterend', bar);
+      heroSection.insertAdjacentElement('afterend', bar);
     }
 
     // Injetar countdown também dentro do box da oferta, antes do botão
