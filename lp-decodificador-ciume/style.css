@@ -1513,8 +1513,12 @@ em {
 .garantia-box-mini strong { display: block; color: #fff; font-size: 0.9rem; margin-bottom: 2px; }
 .garantia-box-mini span { font-size: 0.8rem; color: rgba(255,255,255,0.75); line-height: 1.4; }
 
-@media (max-width: 500px) {
-  .bonus-row__img { width: 80px; }
-  .bonus-row__title { font-size: 0.88rem; }
-  .bonus-row__content { padding: 0.9rem 1rem 0.9rem 0; }
+@media (max-width: 640px) {
+  .bonus-row { flex-direction: column; }
+  .bonus-row__img { width: 100%; height: 220px; flex-shrink: 0; }
+  .bonus-row__img img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+  .bonus-row__tag { top: 10px; left: 10px; border-radius: 4px; }
+  .bonus-row__content { padding: 1rem 1.25rem 1.25rem; }
+  .bonus-row__title { font-size: 0.95rem; }
 }
+/* mobile bonus: vertical layout acima (640px), removido override 500px que conflitava */
