@@ -1637,11 +1637,11 @@ em {
   .promessa-grid { max-width: 640px; margin: 0 auto 1.5rem; }
   .promessa-item { align-items: flex-start; }
 
-  /* Bônus: layout em linha mantido, mas com max-width menor e centralizado */
-  .bonus-stack { max-width: 680px; }
-  .bonus-header { max-width: 680px; margin: 0 auto 2.5rem; }
-  .bonus-row { max-width: 680px; }
-  .bonus-row__img { width: 140px; }
+  /* Bônus: mais largura e imagem maior no desktop */
+  .bonus-stack { max-width: 860px; }
+  .bonus-header { max-width: 860px; margin: 0 auto 2.5rem; }
+  .bonus-row { max-width: 860px; }
+  .bonus-row__img { width: 200px; min-height: 200px; }
 
   /* Depoimentos: 2 colunas */
   .depo-grid { grid-template-columns: 1fr 1fr; max-width: 680px; margin: 0 auto; }
@@ -1661,7 +1661,9 @@ em {
 
 @media (min-width: 1024px) {
   .container { max-width: 860px; }
-  .bonus-row__img { width: 160px; }
+  .bonus-row__img { width: 240px; min-height: 220px; }
+  .bonus-stack { max-width: 960px; }
+  .bonus-header { max-width: 960px; }
   .mec-img-wrap { max-height: 380px; }
 
   /* Especialista: side by side melhor */
