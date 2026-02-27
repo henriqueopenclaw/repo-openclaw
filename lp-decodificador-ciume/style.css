@@ -2249,3 +2249,14 @@ h1, h2, h3,
 .countdown-oferta {
   width: 100% !important;
 }
+
+/* ══ FIX DEFINITIVO: botão CTA oferta sempre 100% ══ */
+.section--oferta .btn--hero,
+.section--oferta .btn--cta,
+.oferta-box .btn--hero,
+.oferta-box .btn--cta {
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+  box-sizing: border-box !important;
+}
