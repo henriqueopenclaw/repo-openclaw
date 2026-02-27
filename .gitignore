@@ -1,2 +1,5 @@
 .DS_Store
 *.jpg
+.vercel
+!lp-*/images/*.jpg
+!lp-*/images/*.png
