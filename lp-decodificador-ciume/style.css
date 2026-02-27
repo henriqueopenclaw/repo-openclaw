@@ -1337,3 +1337,14 @@ em {
 .btn--cta { width: 100%; justify-content: center; margin-bottom: 1rem; }
 .garantia-mini { display: flex; align-items: center; gap: 0.5rem; justify-content: center; color: rgba(255,255,255,0.6); font-size: 0.85rem; }
 .garantia-mini i { color: rgba(255,255,255,0.4); width: 16px; height: 16px; }
+
+/* ── Bônus — cenário (citação de dor) ── */
+.bonus-card__scenario {
+  font-style: italic;
+  color: #8B2252;
+  font-size: 0.88rem;
+  border-left: 3px solid #E8805A;
+  padding-left: 0.75rem;
+  margin: 0.5rem 0 0.75rem;
+  line-height: 1.5;
+}
