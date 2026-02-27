@@ -2068,10 +2068,10 @@ h1, h2, h3,
 
 /* Seção mecanismo — imagem maior e visível no mobile */
 .mec-img-wrap {
-  max-height: 220px !important;
-  border-radius: 20px !important;
+  max-height: 340px !important;
+  border-radius: 16px !important;
   overflow: hidden;
-  margin-bottom: 2rem;
+  margin: 1.5rem 0 2rem !important;
 }
 @media (min-width: 640px) {
   .mec-img-wrap { max-height: 300px !important; }
