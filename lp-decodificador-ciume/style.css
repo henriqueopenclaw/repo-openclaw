@@ -2176,3 +2176,75 @@ h1, h2, h3,
   .hero__visual--desktop { width: 340px; }
   .hero__visual--desktop .hero__image-wrap { width: 340px !important; height: 340px !important; }
 }
+
+/* ══ HERO FINAL — estrutura limpa ══ */
+
+/* Hero inner: coluna no mobile */
+.hero__inner {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 1.5rem !important;
+  text-align: center !important;
+}
+
+.hero__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9rem;
+  width: 100%;
+}
+
+/* Imagem mobile: retangular, largura total, sem círculo */
+.hero__img-block {
+  width: 100%;
+  max-width: 380px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 40px rgba(139,34,82,0.35);
+  aspect-ratio: 4/3;
+}
+.hero__img-el {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Section hero: padding controlado, sem min-height */
+.section--hero {
+  padding: 2.5rem 0 2.5rem !important;
+}
+
+/* Headline mobile menor */
+@media (max-width: 640px) {
+  .hero__headline { font-size: clamp(1.5rem, 7vw, 2rem) !important; }
+  .hero__sub { font-size: 0.88rem !important; }
+  .hero__checks li { font-size: 0.84rem !important; }
+  .hero__img-block { max-width: 100%; border-radius: 16px; aspect-ratio: 16/9; }
+}
+
+/* Desktop: hero em 2 colunas, imagem circular */
+@media (min-width: 768px) {
+  .hero__inner {
+    flex-direction: row !important;
+    text-align: left !important;
+    align-items: center !important;
+    gap: 3rem !important;
+  }
+  .hero__text { align-items: flex-start !important; flex: 1; }
+  .hero__checks { text-align: left !important; }
+  .hero__img-block {
+    width: 280px !important;
+    max-width: 280px !important;
+    height: 280px !important;
+    border-radius: 50% !important;
+    flex-shrink: 0;
+    aspect-ratio: unset !important;
+    border: 3px solid rgba(255,255,255,0.12);
+  }
+}
+@media (min-width: 1024px) {
+  .hero__img-block { width: 320px !important; max-width: 320px !important; height: 320px !important; }
+}
