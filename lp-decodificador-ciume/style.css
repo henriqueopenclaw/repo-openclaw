@@ -2238,3 +2238,14 @@ h1, h2, h3,
 @media (min-width: 1024px) {
   .hero__img-block { width: 320px !important; max-width: 320px !important; height: 320px !important; }
 }
+
+/* ══ FIX: Botão CTA da oferta centralizado e largura total ══ */
+.section--oferta .btn--cta {
+  width: 100% !important;
+  text-align: center !important;
+  justify-content: center !important;
+  display: flex !important;
+}
+.countdown-oferta {
+  width: 100% !important;
+}
