@@ -1238,3 +1238,32 @@ em {
   max-width: 580px;
   margin: 0 auto;
 }
+
+/* ── Imagens ── */
+.hero__image-wrap {
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto 2rem;
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+}
+.hero__image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+.bonus-card__img-wrap {
+  width: 100%;
+  aspect-ratio: 3/4;
+  border-radius: var(--r-md);
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+.bonus-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
