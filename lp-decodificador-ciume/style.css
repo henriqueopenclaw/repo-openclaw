@@ -2111,3 +2111,68 @@ h1, h2, h3,
   display: block;
   margin-bottom: 0.2rem;
 }
+
+
+
+/* ══ HERO: layout bottom-row — bullets + imagem lado a lado ══ */
+@media (max-width: 640px) {
+  .hero__headline { font-size: clamp(1.55rem, 8vw, 2.1rem) !important; }
+  .hero__sub { font-size: 0.88rem !important; margin-bottom: 0.6rem !important; }
+}
+
+.hero__bottom-row {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  width: 100%;
+}
+.hero__bottom-row .hero__checks { flex: 1; }
+
+/* Mobile: imagem pequena à direita dos bullets */
+.hero__bottom-row .hero__visual {
+  display: flex !important;
+  flex-shrink: 0;
+}
+.hero__bottom-row .hero__visual .hero__image-wrap {
+  width: 130px !important;
+  height: 130px !important;
+  border-radius: 50% !important;
+  overflow: hidden;
+  border: 3px solid rgba(255,255,255,0.12) !important;
+  box-shadow: 0 0 30px rgba(139,34,82,0.35) !important;
+  margin: 0 !important;
+  aspect-ratio: unset !important;
+}
+
+/* Desktop: imagem maior, hero__inner em row */
+@media (min-width: 768px) {
+  .hero__inner { flex-direction: row !important; align-items: center; gap: 3rem; }
+  .hero__text { flex: 1; }
+  .hero__bottom-row { flex-direction: column; align-items: flex-start; gap: 1rem; }
+  .hero__bottom-row .hero__visual { display: none !important; } /* usa o desktop visual */
+  .hero__text > .hero__visual {
+    display: block !important;
+    width: 300px; flex-shrink: 0;
+  }
+}
+
+/* hero__visual--desktop: oculto no mobile, visível no desktop */
+.hero__visual--desktop { display: none !important; }
+@media (min-width: 768px) {
+  .hero__visual--desktop {
+    display: block !important;
+    flex-shrink: 0;
+    width: 300px;
+  }
+  .hero__visual--desktop .hero__image-wrap {
+    width: 300px !important; height: 300px !important;
+    border-radius: 50% !important;
+    border: 3px solid rgba(255,255,255,0.12) !important;
+    box-shadow: 0 0 60px rgba(139,34,82,0.35) !important;
+    margin: 0 !important; aspect-ratio: unset !important;
+  }
+}
+@media (min-width: 1024px) {
+  .hero__visual--desktop { width: 340px; }
+  .hero__visual--desktop .hero__image-wrap { width: 340px !important; height: 340px !important; }
+}
