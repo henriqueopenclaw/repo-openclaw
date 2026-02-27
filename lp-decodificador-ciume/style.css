@@ -1670,3 +1670,101 @@ em {
   .especialista-card { padding: 2.5rem; gap: 2.5rem; }
   .especialista-card__photo-wrap { width: 140px; height: 140px; }
 }
+
+/* ══ HERO 2 COLUNAS (desktop) ══ */
+.hero__text { flex: 1; }
+.hero__visual { display: none; }
+.hero__checks {
+  list-style: none; padding: 0; margin: 0 0 1.5rem;
+  display: flex; flex-direction: column; gap: 0.5rem;
+}
+.hero__checks li {
+  padding-left: 1.5rem; position: relative;
+  font-size: 0.88rem; color: rgba(255,255,255,0.8); line-height: 1.4;
+}
+.hero__checks li::before {
+  content: "✓"; position: absolute; left: 0;
+  color: #4ADE80; font-weight: 900;
+}
+
+@media (min-width: 768px) {
+  .hero__inner {
+    flex-direction: row !important;
+    align-items: center;
+    gap: 3rem;
+    text-align: left !important;
+  }
+  .hero__text { align-items: flex-start !important; }
+  .hero__visual {
+    display: block;
+    flex-shrink: 0;
+    width: 280px;
+  }
+  .hero__image-wrap {
+    width: 280px !important;
+    height: 280px !important;
+    border-radius: 50% !important;
+    max-width: unset;
+    margin: 0 !important;
+    border: 4px solid rgba(255,255,255,0.15);
+    box-shadow: 0 0 40px rgba(139,34,82,0.4);
+    aspect-ratio: unset !important;
+  }
+  .trust-list { justify-content: flex-start !important; }
+  .hero__checks { display: flex; }
+}
+
+@media (min-width: 1024px) {
+  .hero__visual { width: 340px; }
+  .hero__image-wrap { width: 340px !important; height: 340px !important; }
+}
+
+/* ══ PENSAMENTOS INTERNOS ══ */
+.section--pensamentos { background: #1A1A2E; }
+.section--pensamentos .section__title { color: #fff; }
+.pensamentos-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+}
+.pensamentos__foto {
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.4);
+  aspect-ratio: 1/1;
+}
+.pensamentos__foto img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.pensamentos__bubbles { display: flex; flex-direction: column; gap: 0.75rem; justify-content: center; }
+.bubble {
+  background: #fff;
+  color: #1A1A2E;
+  border-radius: 18px;
+  padding: 0.85rem 1.1rem;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  max-width: 90%;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+}
+.bubble--right { align-self: flex-end; background: #F5E6E8; }
+.pensamentos__insight {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 16px;
+  padding: 1.25rem 1.5rem;
+  text-align: center;
+  max-width: 560px;
+  margin: 0 auto;
+}
+.pensamentos__insight p { color: rgba(255,255,255,0.9); font-size: 1rem; margin: 0; line-height: 1.6; }
+.pensamentos__insight strong { color: #fff; }
+
+@media (min-width: 640px) {
+  .pensamentos-wrap { flex-direction: row; align-items: center; }
+  .pensamentos__foto { width: 260px; flex-shrink: 0; max-width: unset; margin: 0; }
+  .bubble { font-size: 0.9rem; }
+}
