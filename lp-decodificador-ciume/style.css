@@ -2094,3 +2094,20 @@ h1, h2, h3,
   margin-bottom: 0.5rem;
 }
 .promessa-item:last-child { border-bottom: none; }
+
+
+/* ══ FIX: Seção dor — texto visível em bg claro ══ */
+.section--dor { background: var(--light-base) !important; }
+.section--dor .section__title { color: var(--tl-text) !important; }
+.section--dor .pain-item p { color: var(--tl-body) !important; }
+.section--dor .pain-item__icon { color: var(--accent-1) !important; }
+.section--dor .pain-item__icon svg { color: var(--accent-1) !important; stroke: var(--accent-1) !important; }
+
+/* Garantia title maior */
+.garantia-box-mini strong {
+  font-family: var(--font-display) !important;
+  font-size: 1.2rem !important;
+  font-weight: 700 !important;
+  display: block;
+  margin-bottom: 0.2rem;
+}
