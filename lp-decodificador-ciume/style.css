@@ -1297,3 +1297,42 @@ em {
   .especialista-card { flex-direction: column; text-align: center; }
   .especialista-card__photo-wrap { margin: 0 auto; }
 }
+
+/* ── Dor ── */
+.section--dor { background: var(--dk-bg, #1A1A2E); }
+.section--dor .section__title { color: #fff; }
+.pain-list { display: flex; flex-direction: column; gap: 1.5rem; max-width: 640px; margin: 0 auto; }
+.pain-item { display: flex; gap: 1rem; align-items: flex-start; }
+.pain-item__icon { flex-shrink: 0; width: 40px; height: 40px; background: rgba(232,128,90,0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #E8805A; }
+.pain-item p { color: rgba(255,255,255,0.85); line-height: 1.7; margin: 0; padding-top: 0.5rem; }
+
+/* ── Promessa ── */
+.section--promessa { background: var(--lt-bg, #FDFAF9); }
+.promessa-grid { display: flex; flex-direction: column; gap: 1.25rem; max-width: 600px; margin: 0 auto 1.5rem; }
+.promessa-item { display: flex; gap: 1rem; align-items: flex-start; background: #fff; padding: 1.25rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+.promessa-item i { flex-shrink: 0; color: #8B2252; width: 24px; height: 24px; margin-top: 2px; }
+.promessa-item strong { display: block; margin-bottom: 0.25rem; color: #1A1A2E; }
+.promessa-item p { margin: 0; color: #555; font-size: 0.9rem; }
+.promessa-bonus { text-align: center; color: #8B2252; font-size: 0.9rem; }
+
+/* ── Prova ── */
+.section--prova { background: var(--lt-bg, #FDFAF9); }
+.depo-grid { display: grid; grid-template-columns: 1fr; gap: 1.25rem; max-width: 640px; margin: 0 auto; }
+.depo-card { background: #fff; border-left: 4px solid #8B2252; border-radius: 0 12px 12px 0; padding: 1.25rem 1.5rem; margin: 0; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+.depo-card p { color: #333; font-style: italic; margin: 0 0 0.75rem; line-height: 1.6; }
+.depo-card cite { font-size: 0.85rem; color: #8B2252; font-style: normal; font-weight: 600; }
+@media (min-width: 640px) { .depo-grid { grid-template-columns: 1fr 1fr; } }
+
+/* ── Oferta ── */
+.section--oferta { background: var(--dk-bg, #1A1A2E); }
+.oferta-box { max-width: 520px; margin: 0 auto; text-align: center; }
+.oferta-box__title { color: #fff; font-size: 1.6rem; margin-bottom: 1.5rem; }
+.oferta-list { list-style: none; padding: 0; margin: 0 0 1.5rem; text-align: left; }
+.oferta-list li { display: flex; gap: 0.75rem; align-items: center; color: rgba(255,255,255,0.9); padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); font-size: 0.95rem; }
+.oferta-list li i { color: #E8805A; flex-shrink: 0; }
+.oferta-price { display: flex; align-items: center; gap: 1rem; justify-content: center; margin-bottom: 1.5rem; }
+.oferta-price__de { color: rgba(255,255,255,0.4); text-decoration: line-through; font-size: 1rem; }
+.oferta-price__por { color: #E8805A; font-size: 2.5rem; font-weight: 900; }
+.btn--cta { width: 100%; justify-content: center; margin-bottom: 1rem; }
+.garantia-mini { display: flex; align-items: center; gap: 0.5rem; justify-content: center; color: rgba(255,255,255,0.6); font-size: 0.85rem; }
+.garantia-mini i { color: rgba(255,255,255,0.4); width: 16px; height: 16px; }
