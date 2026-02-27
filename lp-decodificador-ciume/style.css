@@ -2027,3 +2027,70 @@ h1, h2, h3,
     max-width: 680px !important;
   }
 }
+
+/* ══ FIX MOBILE: Hero image visível + seções com respiro visual ══ */
+
+/* Mostrar imagem no mobile também — circular, centrada, após CTA */
+.hero__visual {
+  display: flex !important;
+  justify-content: center;
+  margin-top: 0.5rem;
+  order: 10; /* força depois do texto no flex column */
+}
+
+.hero__visual .hero__image-wrap {
+  width: 200px !important;
+  height: 200px !important;
+  border-radius: 50% !important;
+  overflow: hidden;
+  border: 3px solid rgba(255,255,255,0.12) !important;
+  box-shadow: 0 0 40px rgba(139,34,82,0.35) !important;
+  aspect-ratio: unset !important;
+  margin: 0 !important;
+  max-width: unset !important;
+}
+
+/* Hero__inner: coluna no mobile, linha no desktop */
+.hero__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+/* No mobile: badge e texto centralizados */
+@media (max-width: 767px) {
+  .hero__inner { text-align: center; align-items: center; }
+  .hero__checks { text-align: left; }
+  .trust-list { justify-content: center; }
+  .hero__visual { margin-top: 0; }
+}
+
+/* Seção mecanismo — imagem maior e visível no mobile */
+.mec-img-wrap {
+  max-height: 220px !important;
+  border-radius: 20px !important;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+@media (min-width: 640px) {
+  .mec-img-wrap { max-height: 300px !important; }
+}
+
+/* Separador visual entre seções — evitar parede de texto */
+.section--mecanismo { border-top: none; }
+.section--pensamentos { margin-top: 0; }
+
+/* Padding das seções — mais respiro no mobile */
+@media (max-width: 640px) {
+  .section { padding: 48px 0 !important; }
+  .section--hero { padding: 40px 0 32px !important; }
+}
+
+/* Promessa — ícones mais visíveis como quebra visual */
+.promessa-item {
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  padding-bottom: 1rem;
+  margin-bottom: 0.5rem;
+}
+.promessa-item:last-child { border-bottom: none; }
