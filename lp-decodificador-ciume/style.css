@@ -1973,3 +1973,57 @@ h1, h2, h3,
   font-family: var(--font-display) !important;
   font-size: 1rem !important;
 }
+
+/* ══ FIX: Depoimentos sempre 3 colunas no desktop ══ */
+@media (min-width: 800px) {
+  .depo-grid {
+    grid-template-columns: 1fr 1fr 1fr !important;
+    max-width: 960px !important;
+    gap: 20px !important;
+  }
+}
+
+/* ══ FIX: Oferta desktop — layout vertical centralizado ══ */
+@media (min-width: 720px) {
+  /* Cancelar o 2-col que fica apertado */
+  .oferta-box {
+    grid-template-columns: 1fr !important;
+    max-width: 620px !important;
+    margin: 0 auto !important;
+    gap: 1.5rem !important;
+  }
+
+  /* Itens da oferta em 2 colunas dentro do box */
+  .oferta-list {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 0.5rem 1.5rem !important;
+  }
+
+  /* Total box — largura total */
+  .oferta-total {
+    max-width: 100% !important;
+  }
+
+  /* Countdown oferta centrado */
+  .countdown-oferta {
+    max-width: 100% !important;
+  }
+
+  /* Título da seção de oferta com font display */
+  .section--oferta .section__title,
+  .oferta-box__title {
+    font-family: var(--font-display) !important;
+  }
+
+  /* Padding nos itens */
+  .oferta-itens {
+    padding: 2rem !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .oferta-box {
+    max-width: 680px !important;
+  }
+}
