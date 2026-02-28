@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/lp/:slug", "destination": "/lp-:slug/index.html" },
+    { "source": "/lp/:slug/(.*)", "destination": "/lp-:slug/$1" }
+  ]
+}
